@@ -51,8 +51,9 @@ def filter_data(filename,headerarray):  # Used to filter data which don't belong
                 writer.writerow(row)
 
 
-# filter_business_data()
+filter_business_data()
+
 filter_data("yelp_business_attributes",["business_id","AcceptsInsurance","ByAppointmentOnly","BusinessAcceptsCreditCards","BusinessParking_garage","BusinessParking_street","BusinessParking_validated","BusinessParking_lot","BusinessParking_valet","HairSpecializesIn_coloring","HairSpecializesIn_africanamerican","HairSpecializesIn_curly","HairSpecializesIn_perms","HairSpecializesIn_kids","HairSpecializesIn_extensions","HairSpecializesIn_asian","HairSpecializesIn_straightperms","RestaurantsPriceRange2","GoodForKids","WheelchairAccessible","BikeParking","Alcohol","HasTV","NoiseLevel","RestaurantsAttire","Music_dj","Music_background_music","Music_no_music","Music_karaoke","Music_live","Music_video","Music_jukebox","Ambience_romantic","Ambience_intimate","Ambience_classy","Ambience_hipster","Ambience_divey","Ambience_touristy","Ambience_trendy","Ambience_upscale","Ambience_casual","RestaurantsGoodForGroups","Caters","WiFi","RestaurantsReservations","RestaurantsTakeOut","HappyHour","GoodForDancing","RestaurantsTableService","OutdoorSeating","RestaurantsDelivery","BestNights_monday","BestNights_tuesday","BestNights_friday","BestNights_wednesday","BestNights_thursday","BestNights_sunday","BestNights_saturday","GoodForMeal_dessert","GoodForMeal_latenight","GoodForMeal_lunch","GoodForMeal_dinner","GoodForMeal_breakfast","GoodForMeal_brunch","CoatCheck","Smoking","DriveThru","DogsAllowed","BusinessAcceptsBitcoin","Open24Hours","BYOBCorkage","BYOB","Corkage","DietaryRestrictions_dairy-free","DietaryRestrictions_gluten-free","DietaryRestrictions_vegan","DietaryRestrictions_kosher","DietaryRestrictions_halal","DietaryRestrictions_soy-free","DietaryRestrictions_vegetarian","AgesAllowed","RestaurantsCounterService"])
-# filter_data("yelp_business_hours",["business_id","monday","tuesday","wednesday","thursday","friday","saturday","sunday"])
-# filter_data("yelp_checkin",["business_id","weekday","hour","checkins"])
-# filter_data("yelp_tip",['text','date','likes','business_id','user_id'])
+filter_data("yelp_business_hours",["business_id","monday","tuesday","wednesday","thursday","friday","saturday","sunday"])
+filter_data("yelp_checkin",["business_id","weekday","hour","checkins"])
+filter_data("yelp_tip",['text','date','likes','business_id','user_id'])
