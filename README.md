@@ -38,11 +38,11 @@ Yelp dataset had a total of 5.2 million reviews for 1.7 million businesses. We d
 
 Our problem statement concentrated only on restaurants but Yelp dataset contained data about other businesses like shopping market, grocery shops, etc. First step was to filter out the data which were not related to restaurant domain. We made use of “categories” attributes present in the “Business” table to filter the unnecessary categories. We observed that there were a total of 1264 unique categories. We manually went through each and every category and made a list which contained categories specific to restaurants. Using the list, we found the “business_id” for each restaurant from the “business” table. “business_id” is a unique identifier(primary key) assigned to each business in the Yelp dataset. We made use of “business_id” attribute to filter data from other tables.
 
-### Country-based filter:
+### Country-based filter
 
 Even after filtering the data based on categories, we still had 3.2 million reviews and 75,000 businesses. This was still huge data to process, so we decided to filter based on country and make use of the restaurants which were located in Canada. Our dataset did not provide any details about the country of the restaurants, but they contained details like city, latitude and longitude. We performed reverse geocoding using the latitude and longitude to find the country of the restaurants. Once we had obtained the country of each restaurant, we filtered out the restaurants which were not located in Canada.
 
-### Language-based filter:
+### Language-based filter
 
 After applying Country and Category based filter, we had a total of 25,124 restaurants and approximately 8,000,000 reviews. Reviews tables consisted reviews of various different languages because of this we were not able to get accurate results, so we decided to concentrate on reviews which are in English language alone. We followed a stopword based approach to find the language of each review. We found the number of stopwords present in each review for each language supported by NLTK. We assume that the language which has the most number of stopwords is the language of the review. This method was quite effective and it accurately predicted the language for most of the reviews. Though this approach was not successful for some scenarios where reviews did not contain any stopwords, we manually went through those reviews and filtered it. Once we had detected the language, we filtered out non-English reviews. After all the filtering was done, we had a total of 6,65,000 reviews and 25,124 restaurants.
 
